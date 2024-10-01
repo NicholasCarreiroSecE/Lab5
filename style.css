@@ -15,6 +15,10 @@
     --instrument-background-color: #e8f0fe;
 }
 
+html {
+    background-color: #F4D8CD;
+}
+
 @font-face {
     font-family: 'Rock Salt';
     src: url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap')
@@ -35,6 +39,23 @@ body {
     font-family: var(--nav-font-family);
     font-size: var(--font-size);
     
+}
+
+#home {
+    text-align: center;
+}
+
+#home h1 {
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+header h1 {
+    font-size: 2em;
 }
 
 .nav-link {
@@ -116,6 +137,6 @@ img {
     height: 150px;
 }
 
-.header h1 {
+#genres h2, #artists h2, #instruments h2 {
     text-align: center;
 }
