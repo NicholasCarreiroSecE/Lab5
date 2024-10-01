@@ -149,3 +149,8 @@ img {
     display: inline-block;
 
 }
+
+#genres p {
+    margin-left: 20%;
+    margin-right: 20%;
+}
