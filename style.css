@@ -7,12 +7,17 @@
     --card-padding: 16px;
     --card-margin: 16px;
     --card-hover-scale: 1.05;
-    --font-family: Arial, sans-serif;
     --font-size: 15px;
     --body-font-family: 'Rock Salt', cursive;
+    --nav-font-family: 'Rock Salt', cursive;
     --genre-background-color: #f9f9f9;
     --artist-background-color: #e9f7ef;
     --instrument-background-color: #e8f0fe;
+}
+
+@font-face {
+    font-family: 'Rock Salt';
+    src: url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap')
 }
 
 #topnav {
@@ -21,8 +26,9 @@
     top: 0;
     left: 0;
     background-color: var(--background-color);
-    font-family: var(--font-family);
+    font-family: var(--nav-font-family);
     font-size: var(--font-size);
+    
 }
 
 .nav-link {
@@ -56,27 +62,32 @@
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-@media (max-width: 768px) {
-    .card {
-        flex: 1 1 100%;
-        margin: 8px 0;
+    justify-content: center;
     }
-}
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .card {
-        flex: 1 1 45%;
-    }
-}
+    @media (max-width: 768px) {
+        .nav-link {
+            width: 80px;
+            font-size: 14px;
+        }
 
-@media (min-width: 1025px) {
-    .card {
-        flex: 1 1 30%;
+        .card {
+            width: 100%;
+            margin: 8px 0;
+        }
     }
-}
+
+    @media (max-width: 480px) {
+        .nav-link {
+            width: 60px;
+            font-size: 12px;
+        }
+
+        .card {
+            width: 100%;
+            margin: 4px 0;
+        }
+    }
 
 .card.genre {
     background-color: var(--genre-background-color);
@@ -89,8 +100,6 @@
 .card.instrument {
     background-color: var(--instrument-background-color);
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 body {
     font-family: var(--body-font-family);
