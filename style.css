@@ -1,46 +1,56 @@
+:root {
+    --background-color: #000505;
+    --nav-link-color: white;
+    --logo-background-color: #BFCDE0;
+    --card-border-color: #ddd;
+    --card-shadow-color: rgba(0, 0, 0, 0.1);
+    --card-padding: 16px;
+    --card-margin: 16px;
+    --card-hover-scale: 1.05;
+    --font-family: Arial, sans-serif;
+    --font-size: 15px;
+    --body-font-family: 'Rock Salt', cursive;
+    --genre-background-color: #f9f9f9;
+    --artist-background-color: #e9f7ef;
+    --instrument-background-color: #e8f0fe;
+}
+
 #topnav {
     width: 100%;
-
     position: fixed;
     top: 0;
     left: 0;
-
-    background-color: #000505;
-
-    font-family: Arial, sans-serif;
-    font-size: 15px;
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
 }
 
 .nav-link {
     display: inline-block;
     width: 100px;
     height: 55px;
-
-    color: White;
-
+    color: var(--nav-link-color);
     text-align: center;
     line-height: 55px;
 }
 
 #logo {
     width: 120px;
-
-    background-color: #BFCDE0;
-
+    background-color: var(--logo-background-color);
     font-weight: bold;
 }
 
 .card {
-    border: 1px solid #ddd;
+    border: 1px solid var(--card-border-color);
     border-radius: 8px;
-    padding: 16px;
-    margin: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: var(--card-padding);
+    margin: var(--card-margin);
+    box-shadow: 0 4px 8px var(--card-shadow-color);
     transition: transform 0.2s;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(var(--card-hover-scale));
 }
 
 .card-container {
@@ -69,13 +79,19 @@
 }
 
 .card.genre {
-    background-color: #f9f9f9;
+    background-color: var(--genre-background-color);
 }
 
 .card.artist {
-    background-color: #e9f7ef;
+    background-color: var(--artist-background-color);
 }
 
 .card.instrument {
-    background-color: #e8f0fe;
+    background-color: var(--instrument-background-color);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+body {
+    font-family: var(--body-font-family);
 }
